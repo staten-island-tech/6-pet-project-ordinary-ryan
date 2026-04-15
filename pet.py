@@ -1,30 +1,36 @@
 class Classpet:
-    def __init__(self, name, money, inventory, happiness):
+    def __init__(self, name, happiness):
         self.name = name
-        self.money = money
-        self.inventory = inventory
         self.happiness = happiness
-Boomy = Classpet("Boomy", 500, ["Boots"], 100)
-print(Boomy.__dict__) 
+
+ 
+
+
+action = input("what do you want to do: compliment, make a joke, laugh at, attack ")
+def happy(self):
+    if action == "compliment":
+        self.happiness += 50
+    elif action == "make a joke":
+        self.happiness += 25
+    elif action == "attack":
+        self.happiness += -100
+    elif action == "laugh at":
+        self.happiness += -50
+
+    if self.happiness >= 100:
+        print(self.name, "is now happy")
+    else:
+        print(self.name, "is now sad")
+
+
+def show_balance(self):
+    print(f"{self.name} happiness is now ${self.__happiness}")
+
+Boomy = Classpet("Boomy", 100 )
+print(Boomy.__dict__)
+
+
+""" Boomy.buy({"title": "Sword", "atk": 34}) """
 """ def buy(self, item):
     self.inventory.append(item)
     print(self.name, self.money, self.inventory) """
-action = input("what do you want to do: compliment, make a joke, laugh at, attack ")
-def happy(self, joy):
-    if action == "compliment":
-        joy = 50
-    elif action == "make a joke":
-        joy = 25
-    elif action == "attack":
-        joy = -100
-    elif action == "laugh at":
-        joy = -50
-
-    self += joy
-    if self >= 100:
-        self = 'happy'
-    else:
-        self = 'sad'
-    print("Boomy's is now", self)
-
-""" Boomy.buy({"title": "Sword", "atk": 34}) """

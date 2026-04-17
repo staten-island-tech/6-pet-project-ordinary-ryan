@@ -1,14 +1,14 @@
 class Classpet:
     def __init__(self, name, happiness):
         self.name = name
-        self.__happiness = happiness
+        self.happiness = happiness
 
-Boomy = Classpet("Boomy", 100 )
-print(Boomy.__dict__) 
+def show_balance(self):
+    print(f"{self.name} happiness is now{self.__happiness}")
 
+def happy(self):
+    action = input("what do you want to do: compliment, make a joke, laugh at, attack ")
 
-action = input("what do you want to do: compliment, make a joke, laugh at, attack ")
-def happy(self, joy):
     joy = 0
     if action == "compliment":
         joy = 50
@@ -26,9 +26,9 @@ def happy(self, joy):
     else:
         print(self.name, "is sad")
 
-def show_balance(self):
-    print(f"{self.name} happiness is now{self.__happiness}")
 
+Boomy = Classpet("Boomy", 100 )
+print(Boomy.__dict__) 
 
     
 """ Boomy.buy({"title": "Sword", "atk": 34}) """

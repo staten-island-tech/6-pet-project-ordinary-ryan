@@ -3,32 +3,42 @@ class Classpet:
         self.name = name
         self.happiness = happiness
 
+Boomy = Classpet("Boomy", 100 )
+print(Boomy.__dict__) 
+
 def show_balance(self):
-    print(f"{self.name} happiness is now{self.__happiness}")
+    print(f"{self.name} happiness is now{self.happiness}")
 
 def happy(self):
     action = input("what do you want to do: compliment, make a joke, laugh at, attack ")
-
+    cont = True
     joy = 0
-    if action == "compliment":
-        joy = 50
-    elif action == "make a joke":
-        joy = 25
-    elif action == "attack":
-        joy = -100
-    elif action == "laugh at":
-        joy= -50
+    while cont == True:
+        if action == "compliment":
+            joy = 50
+        elif action == "make a joke":
+            joy = 25
+        elif action == "attack":
+            joy = -100
+        elif action == "laugh at":
+            joy= -50
     
-    self.__happiness += joy
+        self.happiness += joy
 
-    if self.__happiness >= 100:
-        print(self.name, "is happy")
-    else:
-        print(self.name, "is sad")
+        if self.happiness >= 100:
+            print(self.name, "is happy")
+        else:
+            print(self.name, "is sad")
 
+        cont_ = input("do you want to continue: yes or no")
+        if cont_ == "yes":
+            cont = True
+        elif cont_ == "no":
+            cont = False
+            break
+    print("Thank you for playing")
+happy(Boomy)
 
-Boomy = Classpet("Boomy", 100 )
-print(Boomy.__dict__) 
 
     
 """ Boomy.buy({"title": "Sword", "atk": 34}) """

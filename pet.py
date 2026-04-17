@@ -17,13 +17,13 @@ def happy(self):
             joy = 50
             hungry = -10
         elif action == "feed":
-            joy = 25
-            hungry = 50
+            joy = 20
+            hungry = 35
         elif action == "attack":
             joy = -100
             hungry = -50
         elif action == "pet":
-            joy= -50
+            joy= 30
             hungry =-10
     
         self.happiness += joy

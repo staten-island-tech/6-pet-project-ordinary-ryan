@@ -55,21 +55,22 @@ def happy(self):
         
     print(f"Boomy's happiness is now", {self.happiness})
     print(f"Boomy's hunger is now", {self.hunger})
+    print(f"Boomy's energy is now", {self.energy})
     if self.happiness <= 0 or self.hunger <= 0 or self.energy <= 0:
         print(self.name, "is dead")
-    elif self.happiness >= 0 and self.happiness <= 50: 
+    elif  self.happiness >= 0 and self.happiness <= 50:
         print(self.name, "is sad")
-    else:
+    elif self.happiness >= 50:
         print(self.name, "is happy")
     
     if self.hunger >= 0 and self.hunger <= 50: 
         print(self.name, "is hungry")
-    else:
+    elif self.hunger >= 50:
         print(self.name, "is full")
     
     if self.energy >= 0 and self.energy <= 50:
         print(self.name, "is tired")
-    else:
+    elif self.energy >= 50:
         print(self.name, " is refreshed")
 
 
